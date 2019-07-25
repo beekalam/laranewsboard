@@ -1,0 +1,54 @@
+<?php
+
+namespace Tests\Feature;
+
+use App\Category;
+use Tests\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+
+class CreateCategoryTest extends TestCase
+{
+    use RefreshDatabase;
+
+    /** @test */
+    function can_create_category()
+    {
+        $attributes = [
+            'name'  => 'catename',
+            'color' => '#abcdef',
+            'parent_id' => 0
+        ];
+        $this->post('/admin/categories/', $attributes);
+        $this->assertDatabaseHas('categories', $attributes);
+    }
+
+    /** @test */
+    function name_and_color_is_required_to_create_a_category()
+    {
+        $attributes = [
+            'color' => '#abcdef'
+        ];
+
+        $this->post('/admin/categories/', $attributes)
+             ->assertSessionHasErrors('name');
+
+        $attributes = [
+            'name' => 'name'
+        ];
+        $this->post('/admin/categories/', $attributes)
+             ->assertSessionHasErrors('color');
+    }
+
+    /** @test */
+    function category_names_should_be_unique()
+    {
+        $attributes = [
+            'name'  => 'catename',
+            'color' => '#abcdef',
+            'parent_id' => 0,
+        ];
+        $this->post('/admin/categories/', $attributes);
+        $this->assertEquals(1, Category::count());
+    }
+
+}

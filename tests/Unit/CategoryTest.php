@@ -26,4 +26,7 @@ class CategoryTest extends TestCase
         $category = factory(Category::class)->create(['parent_id' => $parent->id]);
         $this->assertEquals($parent->name, $category->parent()->name);
     }
+
+
+
 }
