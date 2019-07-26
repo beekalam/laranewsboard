@@ -39,5 +39,14 @@ class CreateSubcategoryTest extends TestCase
         $this->assertEquals('name changed', Category::subCategories()->first()->name);
     }
 
+    /** @test */
+    function can_delete_sub_category()
+    {
+        $category = factory(Category::class)->create(['parent_id' => 0]);
+        $sub = factory(Category::class)->create(['parent_id' => $category->id]);
+        $this->delete("/admin/subcategories/$sub->id");
+        $this->assertEquals(1, Category::count());
+    }
+
 
 }

@@ -25,7 +25,6 @@ class SubcategoriesController extends Controller
 
     public function edit(Category $subcategory)
     {
-
         return view('admin.subcategories.edit', [
             // 'subcategories'    => Category::subCategories()->get(),
             'subCategory'      => $subcategory,
@@ -35,9 +34,17 @@ class SubcategoriesController extends Controller
 
     public function update(Request $request, Category $subcategory)
     {
-        $this->validate($request,$this->rules());
+        $rules = $this->rules();
+        $rules['name'] = 'required|unique:categories,name,' . $subcategory->id;
+        $this->validate($request, $rules);
         $subcategory->update($request->all());
         return redirect('/admin/subcategories')->with('success', 'Subcategory updated.');
+    }
+
+    public function destroy(Category $subcategory)
+    {
+        $subcategory->delete();
+        return redirect('/admin/subcategories')->with('success', 'Subcategory deleted.');
     }
 
     private function rules()

@@ -12,7 +12,7 @@
                     @csrf
                     @include('admin.categories._category-form',[
                         'category' => $category,
-                        'submit_title' => 'Add Category'
+                        'submit_title' => 'Add Category',
                     ])
                 </form><!-- form end -->
 
@@ -37,7 +37,9 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
-                            @include('admin.categories._categories-table')
+                            @include('admin.categories._categories-table',[
+                                'is_subcategory' => false,
+                            ])
                         </div>
                     </div>
                 </div><!-- /.box-body -->

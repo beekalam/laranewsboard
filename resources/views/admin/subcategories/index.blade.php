@@ -39,7 +39,8 @@
                     <div class="row">
                         <div class="col-sm-12">
                             @include('admin.categories._categories-table',[
-                                'categories' => $subcategories
+                                'categories' => $subcategories,
+                                'is_subcategory' => true,
                             ])
                         </div>
                     </div>

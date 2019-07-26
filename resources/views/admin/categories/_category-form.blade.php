@@ -14,6 +14,7 @@
     {{--                                <option value="1" selected="">English</option>--}}
     {{--                            </select>--}}
     {{--                        </div>--}}
+    {!! var_dump($errors->all()) !!}
     <div class="form-group {{ $errors->has('name')? 'has-error':'' }}">
         <label>Category Name</label>
         <input type="text" class="form-control" name="name" placeholder="Category Name"

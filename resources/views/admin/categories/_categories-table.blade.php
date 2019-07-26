@@ -28,12 +28,15 @@
                         </button>
 
                         <ul class="dropdown-menu options-dropdown">
+                            @php
+                                $cat = $is_subcategory ? 'subcategories': 'categories';
+                            @endphp
                             <li>
-                                <a href="/admin/categories/{{ $item->id }}">
+                                <a href="/admin/{{ $cat }}/{{ $item->id }}/edit">
                                     <i class="fa fa-edit option-icon"></i>edit
                                 </a>
                             </li>
-                            <form method='post' action="/admin/categories/{{ $item->id }}"
+                            <form method='post' action="/admin/{{ $cat }}/{{ $item->id }}"
                                   id="cat_delete_{{ $item->id }}" class="hidden">
                                 @csrf
                                 @method('DELETE')

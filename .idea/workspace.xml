@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1daada2-fd4b-4806-902f-9b3cdcf5673b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vagrant.xml" afterDir="false" />
+    <list default="true" id="e1daada2-fd4b-4806-902f-9b3cdcf5673b" name="Default Changelist" comment="subcategory test update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SubcategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SubcategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/categories/_categories-table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/categories/_categories-table.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/categories/_category-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/categories/_category-form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/categories/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/subcategories/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/subcategories/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/subcategories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/subcategories/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/CreateSubcategoryTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/CreateSubcategoryTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,10 +44,13 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/categories/_category-form.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SubcategoriesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="902">
-              <caret line="83" selection-start-line="83" selection-end-line="83" />
+            <state relative-caret-position="668">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
+              <folding>
+                <element signature="e#40#57#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -76,7 +83,6 @@
         <option value="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/admin/js/custom-1.6.js" />
         <option value="$PROJECT_DIR$/tests/Feature/CreateCategoryTest.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/categories/_categories-table.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/categories/_form.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php" />
         <option value="$PROJECT_DIR$/database/factories/CategoryFactory.php" />
@@ -84,12 +90,14 @@
         <option value="$PROJECT_DIR$/resources/views/admin/layouts/_sidebar.blade.php" />
         <option value="$PROJECT_DIR$/app/Category.php" />
         <option value="$PROJECT_DIR$/tests/Unit/CategoryTest.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/tests/Feature/CreateSubcategoryTest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/SubcategoriesController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/categories/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/subcategories/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/categories/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/categories/_categories-table.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/categories/_category-form.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/subcategories/edit.blade.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/CreateSubcategoryTest.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/SubcategoriesController.php" />
       </list>
     </option>
   </component>
@@ -328,21 +336,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.CreateCategoryTest">
-    <configuration name="CategoryTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\CategoryTest" file="$PROJECT_DIR$/tests/Unit/CategoryTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="CategoryTest.can_get_all_subcategories" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Unit\CategoryTest" file="$PROJECT_DIR$/tests/Unit/CategoryTest.php" method="can_get_all_subcategories" scope="Method" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="PHPUnit.CreateSubcategoryTest.can_delete_sub_category">
     <configuration name="CreateCategoryTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\CreateCategoryTest" file="$PROJECT_DIR$/tests/Feature/CreateCategoryTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="CreateSubcategoryTest.subcategory_needs_name_color_parent_id" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\CreateSubcategoryTest" file="$PROJECT_DIR$/tests/Feature/CreateSubcategoryTest.php" method="subcategory_needs_name_color_parent_id" scope="Method" />
+    <configuration name="CreateSubcategoryTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CreateSubcategoryTest" file="$PROJECT_DIR$/tests/Feature/CreateSubcategoryTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CreateSubcategoryTest.can_delete_sub_category" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CreateSubcategoryTest" file="$PROJECT_DIR$/tests/Feature/CreateSubcategoryTest.php" method="can_delete_sub_category" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CreateSubcategoryTest.can_update_subcategorie" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CreateSubcategoryTest" file="$PROJECT_DIR$/tests/Feature/CreateSubcategoryTest.php" method="can_update_subcategorie" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="CreateSubcategoryTest.to_create_subcategory_parent_id_should_be_valid" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -355,11 +363,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.CreateSubcategoryTest.can_delete_sub_category" />
+        <item itemvalue="PHPUnit.CreateSubcategoryTest" />
+        <item itemvalue="PHPUnit.CreateSubcategoryTest.can_update_subcategorie" />
         <item itemvalue="PHPUnit.CreateCategoryTest" />
         <item itemvalue="PHPUnit.CreateSubcategoryTest.to_create_subcategory_parent_id_should_be_valid" />
-        <item itemvalue="PHPUnit.CreateSubcategoryTest.subcategory_needs_name_color_parent_id" />
-        <item itemvalue="PHPUnit.CategoryTest" />
-        <item itemvalue="PHPUnit.CategoryTest.can_get_all_subcategories" />
       </list>
     </recent_temporary>
   </component>
@@ -374,7 +382,7 @@
       <workItem from="1564063414753" duration="1953000" />
       <workItem from="1564069270570" duration="4464000" />
       <workItem from="1564110532091" duration="93000" />
-      <workItem from="1564110699390" duration="7323000" />
+      <workItem from="1564110699390" duration="16142000" />
     </task>
     <task id="LOCAL-00001" summary="category delete">
       <created>1564116077733</created>
@@ -418,43 +426,57 @@
       <option name="project" value="LOCAL" />
       <updated>1564122846710</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="subcategory store">
+      <created>1564123512634</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1564123512634</updated>
+    </task>
+    <task id="LOCAL-00008" summary="subcategory test update">
+      <created>1564136350162</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1564136350163</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CategoryTest - 2019.07.26 at 09h 58m 44s.xml">
-      <configuration name="CategoryTest" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="CreateSubcategoryTest_can_delete_sub_category - 2019.07.26 at 16h 12m 34s.xml">
+      <configuration name="CreateSubcategoryTest.can_delete_sub_category" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="CategoryTest - 2019.07.26 at 09h 58m 47s.xml">
-      <configuration name="CategoryTest" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="CreateSubcategoryTest_can_delete_sub_category - 2019.07.26 at 16h 13m 35s.xml">
+      <configuration name="CreateSubcategoryTest.can_delete_sub_category" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="CreateSubcategoryTest_subcategory_needs_name_color_parent_id - 2019.07.26 at 10h 59m 43s.xml">
-      <configuration name="CreateSubcategoryTest.subcategory_needs_name_color_parent_id" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="CreateSubcategoryTest_can_delete_sub_category - 2019.07.26 at 16h 13m 43s.xml">
+      <configuration name="CreateSubcategoryTest.can_delete_sub_category" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="CreateSubcategoryTest_subcategory_needs_name_color_parent_id - 2019.07.26 at 11h 00m 08s.xml">
-      <configuration name="CreateSubcategoryTest.subcategory_needs_name_color_parent_id" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="CreateSubcategoryTest_can_delete_sub_category - 2019.07.26 at 16h 13m 45s.xml">
+      <configuration name="CreateSubcategoryTest.can_delete_sub_category" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="CreateSubcategoryTest_subcategory_needs_name_color_parent_id - 2019.07.26 at 11h 00m 31s.xml">
-      <configuration name="CreateSubcategoryTest.subcategory_needs_name_color_parent_id" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="CreateSubcategoryTest_can_delete_sub_category - 2019.07.26 at 16h 13m 48s.xml">
+      <configuration name="CreateSubcategoryTest.can_delete_sub_category" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="CreateSubcategoryTest_subcategory_needs_name_color_parent_id - 2019.07.26 at 11h 00m 57s.xml">
-      <configuration name="CreateSubcategoryTest.subcategory_needs_name_color_parent_id" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="CreateSubcategoryTest_can_delete_sub_category - 2019.07.26 at 16h 13m 59s.xml">
+      <configuration name="CreateSubcategoryTest.can_delete_sub_category" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="CreateSubcategoryTest_subcategory_needs_name_color_parent_id - 2019.07.26 at 11h 01m 31s.xml">
-      <configuration name="CreateSubcategoryTest.subcategory_needs_name_color_parent_id" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="CreateSubcategoryTest_can_delete_sub_category - 2019.07.26 at 16h 14m 16s.xml">
+      <configuration name="CreateSubcategoryTest.can_delete_sub_category" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="CreateSubcategoryTest_to_create_subcategory_parent_id_should_be_valid - 2019.07.26 at 11h 02m 30s.xml">
-      <configuration name="CreateSubcategoryTest.to_create_subcategory_parent_id_should_be_valid" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="CreateSubcategoryTest_can_delete_sub_category - 2019.07.26 at 16h 14m 20s.xml">
+      <configuration name="CreateSubcategoryTest.can_delete_sub_category" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="CreateSubcategoryTest_to_create_subcategory_parent_id_should_be_valid - 2019.07.26 at 11h 03m 15s.xml">
-      <configuration name="CreateSubcategoryTest.to_create_subcategory_parent_id_should_be_valid" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="CreateSubcategoryTest_can_delete_sub_category - 2019.07.26 at 16h 14m 53s.xml">
+      <configuration name="CreateSubcategoryTest.can_delete_sub_category" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="CreateCategoryTest - 2019.07.26 at 11h 07m 13s.xml">
-      <configuration name="CreateCategoryTest" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="CreateSubcategoryTest_can_delete_sub_category - 2019.07.26 at 16h 16m 45s.xml">
+      <configuration name="CreateSubcategoryTest.can_delete_sub_category" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18284000" />
+    <option name="totallyTimeSpent" value="27103000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1027" extended-state="0" />
@@ -479,7 +501,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
-      <window_info anchor="right" id="Terminal" order="5" sideWeight="0.49453822" visible="true" weight="0.31197917" />
+      <window_info anchor="right" id="Terminal" order="5" sideWeight="0.49453822" weight="0.31197917" />
       <window_info active="true" anchor="right" id="Run" order="6" sideWeight="0.50546175" side_tool="true" visible="true" weight="0.31197917" />
     </layout>
   </component>
@@ -493,7 +515,9 @@
     <MESSAGE value="subcategories test" />
     <MESSAGE value="getting all parent categories" />
     <MESSAGE value="subcategory create validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="subcategory create validation" />
+    <MESSAGE value="subcategory store" />
+    <MESSAGE value="subcategory test update" />
+    <option name="LAST_COMMIT_MESSAGE" value="subcategory test update" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.env">
@@ -565,41 +589,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_07_24_153940_create_categories_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/categories/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/subcategories/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/categories/_categories-table.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="35" column="74" selection-start-line="35" selection-start-column="74" selection-end-line="35" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/_sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="129" column="32" selection-start-line="129" selection-start-column="32" selection-end-line="129" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/CategoryFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -627,54 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="19" column="66" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-          <folding>
-            <element signature="e#40#57#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Feature/CreateSubcategoryTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SubcategoriesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-          <folding>
-            <element signature="e#40#57#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/categories/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/subcategories/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Feature/CreateCategoryTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="538">
@@ -685,10 +630,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/CategoryFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/_sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="766">
+          <caret line="132" column="8" selection-start-line="132" selection-start-column="8" selection-end-line="132" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/subcategories/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/categories/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_07_24_153940_create_categories_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/categories/_categories-table.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+          <folding>
+            <element signature="e#40#57#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/categories/_category-form.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="902">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        <state relative-caret-position="590">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/subcategories/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/CreateSubcategoryTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="694">
+          <caret line="46" column="51" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SubcategoriesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="e#40#57#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
