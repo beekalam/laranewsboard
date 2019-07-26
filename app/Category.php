@@ -17,4 +17,9 @@ class Category extends Model
     {
         return Category::where('id', $this->parent_id)->first();
     }
+
+    public static function subCategories()
+    {
+        return Category::where('parent_id', '!=', '0');
+    }
 }
