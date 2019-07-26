@@ -9,7 +9,10 @@
                 </div>
 
                 <form action="/admin/categories" method="post" accept-charset="utf-8">
-                    @include('admin.categories._form')
+                    @include('admin.categories._category-form',[
+                        'category' => $category,
+                        'submit_title' => 'Add Category'
+                    ])
                 </form><!-- form end -->
 
             </div>

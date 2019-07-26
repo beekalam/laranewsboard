@@ -29,7 +29,7 @@
 
                         <ul class="dropdown-menu options-dropdown">
                             <li>
-                                <a href="">
+                                <a href="/admin/categories/{{ $item->id }}">
                                     <i class="fa fa-edit option-icon"></i>edit
                                 </a>
                             </li>

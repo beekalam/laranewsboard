@@ -10,7 +10,8 @@ class CategoriesController extends Controller
     public function index()
     {
         return view('admin.categories.index', [
-            'categories' => Category::all()
+            'categories' => Category::all(),
+            'category'   => new Category()
         ]);
     }
 
@@ -43,6 +44,11 @@ class CategoriesController extends Controller
         $this->validate($request, $this->rules());
         $category->update($request->all());
         return redirect("/admin/categories/$category->id")->with('success', 'Category updated');
+    }
+
+    public function edit(Category $category)
+    {
+        return view('admin.categories.edit', compact('category'));
     }
 
     private function rules()

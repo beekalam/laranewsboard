@@ -12,7 +12,7 @@ $factory->define(Category::class, function (Faker $faker) {
         'slug'        => str_slug($name),
         'keywords'    => $faker->word,
         'description' => $faker->sentence,
-        'color'       => $faker->colorName,
+        'color'       => $faker->hexColor,
         'parent_id'   => function () {
             return Category::all()->random()->id;
         },

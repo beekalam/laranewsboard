@@ -1,6 +1,3 @@
-
-@csrf
-
 <input type="hidden" name="parent_id" value="0">
 
 <div class="box-body">
@@ -21,7 +18,8 @@
     {{--                        </div>--}}
     <div class="form-group {{ $errors->has('name')? 'has-error':'' }}">
         <label>Category Name</label>
-        <input type="text" class="form-control" name="name" placeholder="Category Name" value=""
+        <input type="text" class="form-control" name="name" placeholder="Category Name"
+               value="{{ old('name',$category->name) }}"
                maxlength="200" required="">
         @if($errors->has('name'))
             <span class="help-block">{{ $errors->first('name') }}</span>
@@ -32,19 +30,20 @@
         <label class="control-label">Slug
             <small>(If you leave it blank, it will be generated automatically.)</small>
         </label>
-        <input type="text" class="form-control" name="name_slug" placeholder="Slug" value="">
+        <input type="text" class="form-control" name="slug"
+               placeholder="Slug" value="{{ old('slug',$category->slug) }}">
     </div>
 
     <div class="form-group">
         <label class="control-label">Description (Meta Tag)</label>
         <input type="text" class="form-control" name="description"
-               placeholder="Description (Meta Tag)" value="">
+               placeholder="Description (Meta Tag)" value="{{ old('description',$category->description) }}">
     </div>
 
     <div class="form-group">
         <label class="control-label">Keywords (Meta Tag)</label>
         <input type="text" class="form-control" name="keywords" placeholder="Keywords (Meta Tag)"
-               value="">
+               value="{{ old('keywords',$category->keywords) }}">
     </div>
 
     <!-- Color Picker -->
@@ -52,6 +51,7 @@
         <label>Color</label>
         <div class="input-group my-colorpicker colorpicker-element">
             <input type="text" class="form-control" name="color" maxlength="200" placeholder="Color"
+                   value="{{ old('color', $category->color) }}"
                    required="">
             <div class="input-group-addon">
                 <i style="background-color: rgb(0, 0, 0);"></i>
@@ -63,9 +63,9 @@
         @endif
     </div><!-- /.form group -->
 
-    <div class="form-group">
+    <div class="form-group" style="display:none">
         <label>Menu Order</label>
-        <input type="number" class="form-control" name="category_order" placeholder="Menu Order"
+        <input type="number" class="form-control" name="" placeholder="Menu Order"
                value="1" min="1" required="">
     </div>
 
@@ -73,5 +73,5 @@
 
 <!-- /.box-body -->
 <div class="box-footer">
-    <button type="submit" class="btn btn-primary pull-right">Add Category</button>
+    <button type="submit" class="btn btn-primary pull-right">{{ $submit_title }}</button>
 </div>
