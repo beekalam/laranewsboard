@@ -9,7 +9,7 @@ class CategoriesController extends Controller
 {
     public function index()
     {
-        return view('admin.categories.index',[
+        return view('admin.categories.index', [
             'categories' => Category::all()
         ]);
     }
@@ -34,6 +34,11 @@ class CategoriesController extends Controller
         return redirect('/admin/categories')->with('success', "Category created.");
     }
 
+    public function destroy(Category $category)
+    {
+        $category->delete();
+        return redirect('/admin/categories');
+    }
 
 
 }

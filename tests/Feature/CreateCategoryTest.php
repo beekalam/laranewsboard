@@ -14,8 +14,8 @@ class CreateCategoryTest extends TestCase
     function can_create_category()
     {
         $attributes = [
-            'name'  => 'catename',
-            'color' => '#abcdef',
+            'name'      => 'catename',
+            'color'     => '#abcdef',
             'parent_id' => 0
         ];
         $this->post('/admin/categories/', $attributes);
@@ -43,12 +43,21 @@ class CreateCategoryTest extends TestCase
     function category_names_should_be_unique()
     {
         $attributes = [
-            'name'  => 'catename',
-            'color' => '#abcdef',
+            'name'      => 'catename',
+            'color'     => '#abcdef',
             'parent_id' => 0,
         ];
         $this->post('/admin/categories/', $attributes);
         $this->assertEquals(1, Category::count());
     }
+
+    /** @test */
+    function can_delete_category()
+    {
+        $category = factory(Category::class)->create(['parent_id' => 0]);
+        $this->delete('/admin/categories/' . $category->id);
+        $this->assertEquals(0, Category::count());
+    }
+
 
 }

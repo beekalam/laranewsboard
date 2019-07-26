@@ -23,6 +23,9 @@ function is_admin()
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>title</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -214,8 +217,18 @@ function is_admin()
 <script src="{{ asset('assets/vendor/bootstrap-datetimepicker/moment.min.js') }}"></script>
 <script src="{{ asset('assets/vendor/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js') }}"></script>
 <!-- Custom js -->
-<script src="{{ asset('assets/admin/js/custom-1.6.min.js') }}"></script>
+{{--<script src="{{ asset('assets/admin/js/custom-1.6.min.js') }}"></script>--}}
+<script src="{{ asset('assets/admin/js/custom-1.6.js') }}"></script>
 <!-- Ckeditor -->
+<script>
+    $(document).ready(function () {
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    });
+</script>
 <script>
     var ckEditor = document.getElementById('ckEditor');
     if (ckEditor != undefined && ckEditor != null) {

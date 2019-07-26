@@ -1,7 +1,7 @@
 //update token
-$("form").submit(function () {
-    $("input[name='" + csfr_token_name + "']").val($.cookie(csfr_cookie_name));
-});
+// $("form").submit(function () {
+//     $("input[name='" + csfr_token_name + "']").val($.cookie(csfr_cookie_name));
+// });
 
 //datatable
 $(document).ready(function () {
@@ -451,29 +451,29 @@ function confirm_user_email(id) {
 };
 
 //delete item
-function delete_item(url, id, message) {
-    swal({
-        text: message,
-        icon: "warning",
-        buttons: true,
-        dangerMode: true,
-    }).then(function (willDelete) {
-        if (willDelete) {
-            var data = {
-                'id': id,
-            };
-            data[csfr_token_name] = $.cookie(csfr_cookie_name);
-            $.ajax({
-                type: "POST",
-                url: base_url + url,
-                data: data,
-                success: function (response) {
-                    location.reload();
-                }
-            });
-        }
-    });
-};
+// function delete_item(url, id, message) {
+//     swal({
+//         text: message,
+//         icon: "warning",
+//         buttons: true,
+//         dangerMode: true,
+//     }).then(function (willDelete) {
+//         if (willDelete) {
+//             var data = {
+//                 'id': id,
+//             };
+//             data[csfr_token_name] = $.cookie(csfr_cookie_name);
+//             $.ajax({
+//                 type: "POST",
+//                 url: base_url + url,
+//                 data: data,
+//                 success: function (response) {
+//                     location.reload();
+//                 }
+//             });
+//         }
+//     });
+// };
 
 //ban user
 function ban_user(id, message, option) {
@@ -688,4 +688,16 @@ $(document).ajaxStop(function () {
 });
 
 
+function delete_item(form_id, message) {
+    swal({
+        text: message,
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+    }).then(function (willDelete) {
+        if (willDelete) {
+            $("#" + form_id).submit();
+        }
+    });
+};
 

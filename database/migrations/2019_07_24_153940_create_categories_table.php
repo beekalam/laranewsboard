@@ -21,7 +21,10 @@ class CreateCategoriesTable extends Migration
             $table->string('description',500)->nullable();
             $table->string('color');
             $table->bigInteger('parent_id')->unsigned()->default(0);
+
             $table->timestamps();
+
+            $table->unique(['name']);
         });
     }
 
