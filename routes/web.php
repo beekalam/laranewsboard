@@ -17,6 +17,7 @@ Route::prefix('admin')->group(function () {
     Route::get('/categories/{category}', 'CategoriesController@edit');
 
     Route::get('/subcategories','SubcategoriesController@index');
+    Route::post('/subcategories','SubcategoriesController@store');
 });
 
 
