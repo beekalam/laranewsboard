@@ -39,5 +39,14 @@ class CategoryTest extends TestCase
         $this->assertEquals('sub', Category::subCategories()->first()->name);
     }
 
+    public function can_get_all_parent_categories()
+    {
+        factory(Category::class)->create(['parent_id' => 0]);
+        $parent = factory(Category::class)->create(['parent_id' => 0]);
+        factory(Category::class)->create(['parent_id' => $parent->id]);
+
+        $this->assertEquals(2, Category::parentCategories()->count());
+    }
+
 
 }

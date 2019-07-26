@@ -97,6 +97,7 @@
         </a>
     </li>
     <?php endif; ?>
+
     <?php if (check_user_permission('rss_feeds')): ?>
     <li class="treeview">
         <a href="#">
@@ -126,11 +127,12 @@
                 <a href="/admin/categories">Category</a>
             </li>
             <li>
-                <a href="<?php echo admin_url(); ?>subcategories"><?php echo trans("subcategories"); ?></a>
+                <a href="/admin/subcategories"><?php echo trans("subcategories"); ?></a>
             </li>
         </ul>
     </li>
     <?php endif; ?>
+
     <?php if (check_user_permission('widgets')): ?>
     <li class="treeview">
         <a href="#">

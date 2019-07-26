@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1daada2-fd4b-4806-902f-9b3cdcf5673b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/categories/edit.blade.php" afterDir="false" />
+    <list default="true" id="e1daada2-fd4b-4806-902f-9b3cdcf5673b" name="Default Changelist" comment="subcategories test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/CategoryFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/CategoryFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/categories/_categories-table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/categories/_categories-table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/categories/_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/categories/_category-form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/categories/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/_sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,10 +39,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/categories/_category-form.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Category.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+            <state relative-caret-position="702">
+              <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -71,25 +67,27 @@
       <list>
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/phpunit.xml" />
-        <option value="$PROJECT_DIR$/app/Category.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_07_24_165700_create_posts_table.php" />
         <option value="$PROJECT_DIR$/database/factories/PostFactory.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/layouts/_sidebar.blade.php" />
-        <option value="$PROJECT_DIR$/tests/Unit/CategoryTest.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_07_24_153940_create_categories_table.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/admin/js/custom-1.6.js" />
         <option value="$PROJECT_DIR$/tests/Feature/CreateCategoryTest.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/categories/_categories-table.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/categories/_form.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CategoriesController.php" />
         <option value="$PROJECT_DIR$/database/factories/CategoryFactory.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/categories/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/categories/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/categories/_category-form.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/tests/Unit/CategoryTest.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/layouts/_sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/subcategories/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/SubcategoriesController.php" />
+        <option value="$PROJECT_DIR$/app/Category.php" />
       </list>
     </option>
   </component>
@@ -266,6 +264,14 @@
             <path>
               <item name="laranews" type="b2602c69:ProjectViewProjectNode" />
               <item name="laranews" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="subcategories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="laranews" type="b2602c69:ProjectViewProjectNode" />
+              <item name="laranews" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -294,7 +300,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/categories" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -302,6 +308,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/admin" />
       <recent name="$PROJECT_DIR$/resources/views/admin/categories" />
       <recent name="$PROJECT_DIR$/public" />
     </key>
@@ -318,13 +325,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.CreateCategoryTest">
-    <configuration name="CreateCategoryTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\CreateCategoryTest" file="$PROJECT_DIR$/tests/Feature/CreateCategoryTest.php" scope="Class" />
+  <component name="RunManager" selected="PHPUnit.CategoryTest">
+    <configuration name="CategoryTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\CategoryTest" file="$PROJECT_DIR$/tests/Unit/CategoryTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="CreateCategoryTest.can_create_category" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\CreateCategoryTest" file="$PROJECT_DIR$/tests/Feature/CreateCategoryTest.php" method="can_create_category" scope="Method" />
+    <configuration name="CategoryTest.can_get_all_subcategories" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\CategoryTest" file="$PROJECT_DIR$/tests/Unit/CategoryTest.php" method="can_get_all_subcategories" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CreateCategoryTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\CreateCategoryTest" file="$PROJECT_DIR$/tests/Feature/CreateCategoryTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="CreateCategoryTest.can_delete_category" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -335,21 +346,17 @@
       <TestRunner class="Tests\Feature\CreateCategoryTest" file="$PROJECT_DIR$/tests/Feature/CreateCategoryTest.php" method="can_update_a_category" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="CreateCategoryTest.name_and_color_is_required_to_create_a_category" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\CreateCategoryTest" file="$PROJECT_DIR$/tests/Feature/CreateCategoryTest.php" method="name_and_color_is_required_to_create_a_category" scope="Method" />
-      <method v="2" />
-    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.CategoryTest" />
+        <item itemvalue="PHPUnit.CategoryTest.can_get_all_subcategories" />
         <item itemvalue="PHPUnit.CreateCategoryTest" />
         <item itemvalue="PHPUnit.CreateCategoryTest.can_update_a_category" />
         <item itemvalue="PHPUnit.CreateCategoryTest.can_delete_category" />
-        <item itemvalue="PHPUnit.CreateCategoryTest.can_create_category" />
-        <item itemvalue="PHPUnit.CreateCategoryTest.name_and_color_is_required_to_create_a_category" />
       </list>
     </recent_temporary>
   </component>
@@ -364,7 +371,7 @@
       <workItem from="1564063414753" duration="1953000" />
       <workItem from="1564069270570" duration="4464000" />
       <workItem from="1564110532091" duration="93000" />
-      <workItem from="1564110699390" duration="3566000" />
+      <workItem from="1564110699390" duration="4649000" />
     </task>
     <task id="LOCAL-00001" summary="category delete">
       <created>1564116077733</created>
@@ -380,22 +387,24 @@
       <option name="project" value="LOCAL" />
       <updated>1564116512894</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="category edit view">
+      <created>1564117778208</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1564117778208</updated>
+    </task>
+    <task id="LOCAL-00004" summary="subcategories test">
+      <created>1564118308481</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1564118308481</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CreateCategoryTest_can_update_a_category - 2019.07.26 at 09h 15m 54s.xml">
-      <configuration name="CreateCategoryTest.can_update_a_category" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="CreateCategoryTest_can_update_a_category - 2019.07.26 at 09h 16m 01s.xml">
-      <configuration name="CreateCategoryTest.can_update_a_category" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="CreateCategoryTest_can_update_a_category - 2019.07.26 at 09h 16m 07s.xml">
-      <configuration name="CreateCategoryTest.can_update_a_category" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="CreateCategoryTest_can_update_a_category - 2019.07.26 at 09h 16m 18s.xml">
-      <configuration name="CreateCategoryTest.can_update_a_category" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
     <history-entry file="CreateCategoryTest_can_update_a_category - 2019.07.26 at 09h 17m 04s.xml">
       <configuration name="CreateCategoryTest.can_update_a_category" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
@@ -414,17 +423,30 @@
     <history-entry file="CreateCategoryTest - 2019.07.26 at 09h 17m 30s.xml">
       <configuration name="CreateCategoryTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
+    <history-entry file="CategoryTest_can_get_all_subcategories - 2019.07.26 at 09h 46m 20s.xml">
+      <configuration name="CategoryTest.can_get_all_subcategories" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="CategoryTest_can_get_all_subcategories - 2019.07.26 at 09h 47m 02s.xml">
+      <configuration name="CategoryTest.can_get_all_subcategories" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="CategoryTest_can_get_all_subcategories - 2019.07.26 at 09h 47m 06s.xml">
+      <configuration name="CategoryTest.can_get_all_subcategories" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="CategoryTest_can_get_all_subcategories - 2019.07.26 at 09h 47m 13s.xml">
+      <configuration name="CategoryTest.can_get_all_subcategories" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14527000" />
+    <option name="totallyTimeSpent" value="15610000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50152284" side_tool="true" weight="0.134375" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49847716" visible="true" weight="0.134375" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49847716" visible="true" weight="0.134375" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" weight="0.32969216" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Version Control" order="2" />
@@ -440,8 +462,8 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
-      <window_info active="true" anchor="right" id="Terminal" order="5" sideWeight="0.49652433" visible="true" weight="0.31197917" />
-      <window_info anchor="right" id="Run" order="6" sideWeight="0.50347567" side_tool="true" visible="true" weight="0.31197917" />
+      <window_info anchor="right" id="Terminal" order="5" sideWeight="0.49453822" visible="true" weight="0.31197917" />
+      <window_info anchor="right" id="Run" order="6" sideWeight="0.50546175" side_tool="true" visible="true" weight="0.31197917" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,7 +472,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="category delete" />
     <MESSAGE value="category update tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="category update tests" />
+    <MESSAGE value="category edit view" />
+    <MESSAGE value="subcategories test" />
+    <option name="LAST_COMMIT_MESSAGE" value="subcategories test" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.env">
@@ -481,13 +505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/factories/PostFactory.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
@@ -505,34 +522,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/_sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3016">
-          <caret line="116" selection-start-line="116" selection-end-line="116" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
           <caret line="3" column="10" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Unit/CategoryTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#30#47#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -560,27 +553,6 @@
           <folding>
             <element signature="e#33#50#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/categories/_categories-table.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="35" column="74" selection-start-line="35" selection-start-column="74" selection-end-line="35" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/CategoryFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="14" column="42" lean-forward="true" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -617,8 +589,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/categories/_category-form.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+        <state relative-caret-position="426">
+          <caret line="57" column="18" lean-forward="true" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Unit/CategoryTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#30#47#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/subcategories/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/categories/_categories-table.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="35" column="74" selection-start-line="35" selection-start-column="74" selection-end-line="35" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/_sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="129" column="32" selection-start-line="129" selection-start-column="32" selection-end-line="129" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/CategoryFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/subcategories/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="13" column="58" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SubcategoriesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#40#57#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
         </state>
       </provider>
     </entry>

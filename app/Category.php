@@ -22,4 +22,9 @@ class Category extends Model
     {
         return Category::where('parent_id', '!=', '0');
     }
+
+    public function scopeParentCategories($query)
+    {
+        return $query->where('parent_id','=','0');
+    }
 }
