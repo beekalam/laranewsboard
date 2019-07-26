@@ -11,8 +11,9 @@
                 <form action="/admin/categories" method="post" accept-charset="utf-8">
                     @csrf
                     @include('admin.categories._category-form',[
-                        'category' => $category,
-                        'submit_title' => 'Add Category'
+                        'category' => $subCategory,
+                        'submit_title' => 'Add SubCategory',
+                        'parent_categories' => $parentCategories,
                     ])
                 </form><!-- form end -->
 
@@ -24,7 +25,7 @@
             <div class="box">
                 <div class="box-header with-border">
                     <div class="pull-left">
-                        <h3 class="box-title">Categories</h3>
+                        <h3 class="box-title">SubCategories</h3>
                     </div>
                 </div><!-- /.box-header -->
 
@@ -37,7 +38,9 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
-                            @include('admin.categories._categories-table')
+                            @include('admin.categories._categories-table',[
+                                'categories' => $subcategories
+                            ])
                         </div>
                     </div>
                 </div><!-- /.box-body -->

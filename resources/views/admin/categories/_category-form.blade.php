@@ -1,5 +1,3 @@
-<input type="hidden" name="parent_id" value="0">
-
 <div class="box-body">
 
     <!-- include message block -->
@@ -68,6 +66,25 @@
         <input type="number" class="form-control" name="" placeholder="Menu Order"
                value="1" min="1" required="">
     </div>
+
+    @if(isset($parent_categories))
+        <div class="form-group" {{ $errors->has('parent_id') ? 'has-error': '' }}>
+            <label>Parent Category</label>
+            <select id="categories" class="form-control" name="parent_id" required="">
+                <option value="">Select</option>
+                @foreach($parent_categories as $pcat)
+                    <option value="{{ $pcat->id }}">{{ $pcat->name }}</option>
+                @endforeach
+            </select>
+        </div>
+
+        @if($errors->has('parent_id'))
+            <span class="help-block">{{ $errors->first('parent_id') }}</span>
+        @endif
+
+    @else
+        <input type="hidden" name="parent_id" value="0">
+    @endif
 
 </div>
 
