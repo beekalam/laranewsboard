@@ -60,4 +60,17 @@ class CreateCategoryTest extends TestCase
     }
 
 
+    /** @test */
+    function can_update_a_category()
+    {
+        $this->withoutExceptionHandling();
+        $category = factory(Category::class)->create(['parent_id' => 0]);
+        $this->put('/admin/categories/' . $category->id, [
+            'name'  => 'name changed',
+            'color' => '#abcdef'
+        ]);
+        $this->assertEquals('name changed', Category::first()->name);
+    }
+
+
 }

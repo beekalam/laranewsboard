@@ -14,12 +14,10 @@ class CategoriesController extends Controller
         ]);
     }
 
+
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'name'  => 'required|unique:categories,name',
-            'color' => 'required'
-        ]);
+        $this->validate($request, $this->rules());
 
         Category::create([
             'name'        => $request->name,
@@ -38,6 +36,21 @@ class CategoriesController extends Controller
     {
         $category->delete();
         return redirect('/admin/categories');
+    }
+
+    public function update(Request $request, Category $category)
+    {
+        $this->validate($request, $this->rules());
+        $category->update($request->all());
+        return redirect("/admin/categories/$category->id")->with('success', 'Category updated');
+    }
+
+    private function rules()
+    {
+        return [
+            'name'  => 'required|unique:categories,name',
+            'color' => 'required'
+        ];
     }
 
 
