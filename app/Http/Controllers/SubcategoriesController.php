@@ -23,6 +23,23 @@ class SubcategoriesController extends Controller
         return redirect('/admin/subcategories')->with('success', 'Subcategory created.');
     }
 
+    public function edit(Category $subcategory)
+    {
+
+        return view('admin.subcategories.edit', [
+            // 'subcategories'    => Category::subCategories()->get(),
+            'subCategory'      => $subcategory,
+            'parentCategories' => Category::parentCategories()->get(),
+        ]);
+    }
+
+    public function update(Request $request, Category $subcategory)
+    {
+        $this->validate($request,$this->rules());
+        $subcategory->update($request->all());
+        return redirect('/admin/subcategories')->with('success', 'Subcategory updated.');
+    }
+
     private function rules()
     {
         return [

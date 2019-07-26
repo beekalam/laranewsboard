@@ -26,6 +26,18 @@ class CreateSubcategoryTest extends TestCase
         ])->assertSessionHasErrors('parent_id');
     }
 
+    /** @test */
+    function can_update_subcategories()
+    {
+        $category = factory(Category::class)->create(['parent_id' => 0]);
+        $sub = factory(Category::class)->create(['parent_id' => $category->id]);
+        $this->put("/admin/subcategories/$sub->id", [
+            'name'      => 'name changed',
+            'color'     => '#abcdef',
+            'parent_id' => $sub->parent_id
+        ]);
+        $this->assertEquals('name changed', Category::subCategories()->first()->name);
+    }
 
 
 }
