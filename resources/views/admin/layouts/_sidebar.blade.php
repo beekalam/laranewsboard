@@ -39,7 +39,7 @@
         </a>
         <ul class="treeview-menu">
             <li>
-                <a href="<?php echo admin_url(); ?>add-post"><?php echo trans("add_article"); ?></a>
+                <a href="/admin/posts/create">Add Article</a>
             </li>
             <li>
                 <a href="<?php echo admin_url(); ?>add-ordered-list"><?php echo trans("add_ordered_list"); ?></a>

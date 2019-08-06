@@ -17,14 +17,14 @@ class CreatePostsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title',512);
             $table->string('slug',512);
-            $table->string('keywords',512);
-            $table->string('summary',5000);
-            $table->text('content');
+            $table->string('keywords',512)->nullable();
+            $table->string('summary',5000)->nullable();
+            $table->text('content')->nullable();
             $table->bigInteger('category_id');
-            $table->bigInteger('subcategory_id');
-            $table->bigInteger('hits');
+            $table->bigInteger('subcategory_id')->nullable();
+            $table->bigInteger('hits')->nullable();
             $table->bigInteger('user_id');
-            $table->tinyInteger('status');
+            $table->tinyInteger('status')->default(1);
 
             $table->timestamps();
         });

@@ -21,6 +21,9 @@ Route::prefix('admin')->group(function () {
     Route::get('/subcategories/{subcategory}/edit', 'SubcategoriesController@edit');
     Route::put('/subcategories/{subcategory}', 'SubcategoriesController@update');
     Route::delete('/subcategories/{subcategory}','SubcategoriesController@destroy');
+
+    Route::get('/posts/create','PostsController@create');
+    Route::post('/posts/','PostsController@store');
 });
 
 
