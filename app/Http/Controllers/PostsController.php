@@ -21,7 +21,7 @@ class PostsController extends Controller
     public function create()
     {
         return view('admin.posts.create', [
-            'categories' => Category::all()
+            'categories' => Category::where('parent_id',0)->get()
         ]);
     }
 

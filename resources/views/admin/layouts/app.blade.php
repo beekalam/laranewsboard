@@ -1,24 +1,4 @@
-<?php
-function base_url()
-{
-    return '';
-}
-
-
-function check_user_permission($s)
-{
-    return true;
-}
-function admin_url()
-{
-    return '';
-}
-function is_admin()
-{
-    return true;
-}
-?>
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
