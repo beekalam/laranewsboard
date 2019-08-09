@@ -10,18 +10,27 @@ $factory->define(Post::class, function (Faker $faker) {
         'title'           => $title = $faker->word,
         'slug'            => str_slug($title),
         'keywords'        => $faker->word,
-        'summary'         => $faker->paragraph,
-        'content'         => $faker->paragraph,
+        'description'     => $faker->paragraph,
+        'page_content'         => $faker->paragraph,
         'category_id'     => function () {
-            return \App\Category::where('parent_id', 0)->random();
+            if(\App\Category::count() > 0)
+                return \App\Category::where('parent_id', 0)->get()->random();
+            else
+                return factory(\App\Category::class)->create(['parent_id' => 0]);
         },
-        'sub_category_id' => function () {
-            return \App\Category::where('parent_id', '>', 0)->random();
+        'subcategory_id' => function () {
+            if(\App\Category::where('parent_id','>',0)->count() > 0)
+                return \App\Category::where('parent_id', '>', 0)->get()->random();
+            else
+                return factory(\App\Category::class)->create(['parent_id' => 1]);
         },
         'hits'            => $faker->numberBetween(10, 20),
         'status'          => 0,
         'user_id'         => function () {
-            return \App\User::all()->random();
+            if(\App\User::count() > 0)
+                return \App\User::all()->random();
+            else
+                return factory(\App\User::class)->create();
         }
     ];
 

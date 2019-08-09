@@ -19,5 +19,6 @@ class DatabaseSeeder extends Seeder
 
         factory(\App\Category::class, 5)->create(['parent_id' => 0]);
         factory(\App\Category::class, 10)->create();
+        factory(\App\Post::class,20)->create();
     }
 }

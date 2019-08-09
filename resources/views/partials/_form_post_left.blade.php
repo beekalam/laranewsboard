@@ -193,7 +193,7 @@
             </div>
         </div>
 
-        <?php //if ($show_content_field == true): ?>
+        @if($show_content_field == true)
         <div class="form-group">
             <div class="row">
                 <div class="col-sm-12">
@@ -203,9 +203,9 @@
                 </div>
             </div>
         </div>
-        <?php //else: ?>
+        @else
         <input type="hidden" name="content" value="">
-        <?php ?>//endif
+        @endif
 
     </div>
 

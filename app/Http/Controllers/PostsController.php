@@ -18,6 +18,16 @@ class PostsController extends Controller
         $this->middleware('auth');
     }
 
+    public function index()
+    {
+        //todo continue here
+        return view('admin.posts.index',[
+            'posts' => Post::paginate(10),
+            'title' => "Posts",
+            'list_type' => 'test',
+        ]);
+    }
+
     public function create()
     {
         return view('admin.posts.create', [

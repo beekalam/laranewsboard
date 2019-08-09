@@ -24,7 +24,12 @@ Route::prefix('admin')->group(function () {
 
     Route::get('/posts/create','PostsController@create');
     Route::post('/posts/','PostsController@store');
+    Route::get('/posts','PostsController@index');
+    Route::get('/ordered-list','OrderedListController@create');
+    Route::post('/ordered-list','OrderedListController@store');
+    ///----------------------
 });
+
 
 
 

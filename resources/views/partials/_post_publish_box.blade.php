@@ -33,15 +33,16 @@
             </div>
         </div>
         <div class="form-group">
-            <?php if ($post_type == "gallery" || $post_type == "ordered_list"): ?>
+            @if ($post_type == "gallery" || $post_type == "ordered_list")
                 <button type="submit" name="status" value="0" class="btn btn-primary pull-right"> 
                     @lang('messages.save_and_continue')
                 </button>
-            <?php else: ?>
+            @else
                 <button type="submit" name="status" value="1" class="btn btn-primary pull-right">
                     @lang('messages.add_post')
                 </button>
-            <?php endif; ?>
+            @endif
+            
             <button type="submit" name="status" value="0" class="btn btn-warning btn-draft pull-right">
                 @lang('messages.save_draft')
             </button>
