@@ -31,6 +31,7 @@ class CreatePostTest extends TestCase
 
         $this->post('/admin/posts', $attributes);
         $this->assertDatabaseHas('posts', $attributes);
+        $this->assertDatabaseHas('posts', ['post_type' => 'post']);
     }
 
     

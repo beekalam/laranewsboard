@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Category;
 use App\Post;
-use Illuminate\Http\Request;
 
-class OrderedListController extends Controller
+class GalleryController extends Controller
 {
-
-    /**
+    
+     /**
      * OrderedListController constructor.
      */
     public function __construct()
@@ -32,7 +32,7 @@ class OrderedListController extends Controller
         ]);
         $fields['slug'] = $request->filled('slug') ? $request->slug : str_slug($request->title);
         $fields['user_id'] = auth()->id();
-        $fields['post_type'] = 'ordered_list';
+        $fields['post_type'] = 'gallery';
         Post::create($fields);
         return redirect('/admin/ordered-list')->with('success','Ordered List created successfully');
     }

@@ -6,6 +6,7 @@ use App\Post;
 use Faker\Generator as Faker;
 
 $factory->define(Post::class, function (Faker $faker) {
+    $post_types = ['gallery','post','ordered_list'];
     return [
         'title'           => $title = $faker->word,
         'slug'            => str_slug($title),
@@ -31,7 +32,8 @@ $factory->define(Post::class, function (Faker $faker) {
                 return \App\User::all()->random();
             else
                 return factory(\App\User::class)->create();
-        }
+        },
+        'post_type' => $post_types[array_rand($post_types)]
     ];
 
 });

@@ -43,6 +43,7 @@ class PostsController extends Controller
         $fields['slug'] = $request->filled('slug') ? $request->slug : Str::slug($request->title);
         $fields['subcategory_id'] = $request->subcategory_id;
         $fields['user_id'] = auth()->id();
+        $fields['post_type'] = 'post';
         Post::create($fields);
         return redirect('/admin/posts/create')->with('message', 'Post created successfully.');
     }

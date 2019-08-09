@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="col-sm-12 form-header">
                         <h1 class="form-title">@lang('messages.add_article')</h1>
-                        <a href="<?php echo admin_url(); ?>posts?lang_id="
+                        <a href="admin/posts?lang_id="
                            class="btn btn-success btn-add-new pull-right">
                             <i class="fa fa-bars"></i>
                             @lang('messages.posts')
@@ -23,7 +23,7 @@
                     <div class="col-sm-12">
                         <div class="form-post">
                             <div class="form-post-left">
-                                @include('partials._form_post_left')
+                                @include('partials._form_post_left',['show_content_field' => true])
                             </div>
                             <div class="form-post-right">
                                 <div class="row">

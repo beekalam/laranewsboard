@@ -33,6 +33,7 @@ class CreatePostsTable extends Migration
             $table->string('page_type')->default('page');
             $table->bigInteger('category_id');
             $table->bigInteger('subcategory_id')->nullable();
+            $table->string('post_type');
             $table->bigInteger('hits')->nullable();
             $table->bigInteger('user_id');
             $table->tinyInteger('status')->default(1);

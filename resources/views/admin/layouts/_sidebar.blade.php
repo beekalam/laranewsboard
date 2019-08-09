@@ -45,13 +45,13 @@
                 <a href="/admin/ordered-list">@lang("messages.add_ordered_list")</a>
             </li>
             <li>
-                <a href="admin/add-gallery">@lang("add_gallery")</a>
+                <a href="/admin/gallery">@lang("messages.add_gallery")</a>
             </li>
             <li>
-                <a href="admin/add-video">@lang("add_video")</a>
+                <a href="admin/add-video">@lang("messages.add_video")</a>
             </li>
             <li>
-                <a href="admin/add-audio">@lang("add_audio")</a>
+                <a href="admin/add-audio">@lang("messages.add_audio")</a>
             </li>
         </ul>
     </li>

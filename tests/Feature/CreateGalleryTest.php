@@ -7,7 +7,7 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-class CreateOrderedListTest extends TestCase
+class CreateGalleryTest extends TestCase
 {
     use RefreshDatabase;
 
@@ -15,7 +15,7 @@ class CreateOrderedListTest extends TestCase
     function required_fields_to_create_ordered_list()
     {
         $this->signIn();
-        $this->post('admin/ordered-list',[ ])
+        $this->post('admin/gallery',[ ])
             ->assertSessionHasErrors('title')
             ->assertSessionHasErrors('category_id');
     }
@@ -31,9 +31,9 @@ class CreateOrderedListTest extends TestCase
             'slug' => str_slug($title),
         ];
 
-        $this->post('/admin/ordered-list', $attributes);
+        $this->post('/admin/gallery', $attributes);
         $this->assertDatabaseHas('posts', $attributes);
-        $this->assertDatabaseHas('posts',['post_type' => 'ordered_list']);
+        $this->assertDatabaseHas('posts',['post_type' => 'gallery']);
     }
 
     
