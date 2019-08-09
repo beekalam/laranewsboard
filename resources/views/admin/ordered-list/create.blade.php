@@ -4,7 +4,6 @@
 <div class="row">
     <div class="col-sm-12">
         <!-- form start -->
-        <?php //echo form_open_multipart('post_controller/add_ordered_list_post'); ?>
         <form class="" action="/admin/ordered-list" method="post" enctype="multipart/form-data">
             @csrf
         <div class="row">
