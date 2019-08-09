@@ -32,6 +32,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/gallery','GalleryController@create');
     Route::post('/gallery','GalleryController@store');
 
+    Route::get('/video','videoController@create');
+    Route::post('/video','VideoController@store');
     ///----------------------
 });
 

@@ -4,13 +4,12 @@
 <div class="row">
     <div class="col-sm-12">
         <!-- form start -->
-        <?php //echo form_open_multipart('post_controller/add_gallery_post'); ?>
-        <form class="" action="" method="post" enctype="multipart/form-data">
+        <form class="" action="/admin/gallery" method="post" enctype="multipart/form-data">
             @csrf
         <div class="row">
             <div class="col-sm-12 form-header">
                 <h1 class="form-title">@lang('messages.add_gallery'); ?></h1>
-                <a href="admin/posts?lang_id=<?php echo $general_settings->site_lang; ?>"
+                <a href="admin/posts?lang_id="
                    class="btn btn-success btn-add-new pull-right">
                     <i class="fa fa-bars"></i>
                     @lang('messages.posts'); ?>
