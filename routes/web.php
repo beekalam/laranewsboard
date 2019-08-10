@@ -34,6 +34,10 @@ Route::prefix('admin')->group(function () {
 
     Route::get('/video','videoController@create');
     Route::post('/video','VideoController@store');
+
+
+    Route::get('/audio','AudioController@create');
+    Route::post('/audio','AudioController@store');
     ///----------------------
 });
 
