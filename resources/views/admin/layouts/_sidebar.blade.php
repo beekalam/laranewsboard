@@ -51,7 +51,7 @@
                 <a href="/admin/video">@lang("messages.add_video")</a>
             </li>
             <li>
-                <a href="admin/add-audio">@lang("messages.add_audio")</a>
+                <a href="/admin/audio">@lang("messages.add_audio")</a>
             </li>
         </ul>
     </li>
