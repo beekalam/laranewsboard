@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="row">
-        <form class="col-sm-12">
+        <div class="col-sm-12">
             <!-- form start -->
             <form action="/admin/posts" enctype="multipart/form-data" method="post" accept-charset="utf-8">
                 @csrf
@@ -28,7 +28,7 @@
                             <div class="form-post-right">
                                 <div class="row">
                                     <div class="col-sm-12">
-                                        @include('partials._post_image_upload_box')
+                                        @include('partials._post_image_upload_box',['images' => []])
                                     </div>
                                     <div class="col-sm-12">
                                         <div class="box">
@@ -75,11 +75,11 @@
                     </div>
                 </div>
             </form>
-    </div>
+        </div>
     </div>
 
-    <?php //("admin/includes/_file_manager_image"); ?>
-    <?php //("admin/includes/_file_manager_ckeditor"); ?>
+    @include('partials._file_manager_image',['images' => []])
+    @include('partials._file_manager_ckeditor',['images' => []])
 
 
 @endsection

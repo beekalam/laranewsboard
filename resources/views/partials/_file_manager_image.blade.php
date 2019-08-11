@@ -10,15 +10,17 @@
 
                 <div class="file-manager">
                     <div class="file-manager-left">
-                        <form action="/admin/" method="post" enctype="multipart/form-data" 
-                                id='form_image_file_manager'>
+                        <form action="/admin/file/upload-multiple-images" method="post" enctype="multipart/form-data"
+                              accept-charset="utf-8" id='form_image_file_manager'>
                             @csrf
                         <div class="row">
                             <div class="col-sm-12">
                                 <a id="btn_img_upload" class='btn btn-md bg-purple btn-upload'>
                                     <i class="fa fa-image"></i>&nbsp;&nbsp;
                                     <span>@lang('messages.add_image'); ?></span>
-                                    <input type="file" id="Multifileupload" name="files[]" class="upload-file-input img_file_manager_input" accept=".png, .jpg, .jpeg, .gif" multiple="multiple">
+                                    <input type="file" id="Multifileupload" name="files[]" 
+                                            class="upload-file-input img_file_manager_input" 
+                                            accept=".png, .jpg, .jpeg, .gif" multiple="multiple">
                                 </a>
                             </div>
                         </div>
@@ -80,8 +82,12 @@
 
             <div class="modal-footer">
                 <div class="file-manager-footer">
-                    <button type="button" id="btn_img_delete" class="btn btn-danger pull-left btn-file-delete"><i class="fa fa-trash"></i>&nbsp;&nbsp;@lang('messages.delete'); ?></button>
-                    <button type="button" id="btn_img_select" class="btn bg-olive btn-file-select"><i class="fa fa-check"></i>&nbsp;&nbsp;@lang('messages.select_image'); ?></button>
+                    <button type="button" id="btn_img_delete" class="btn btn-danger pull-left btn-file-delete">
+                        <i class="fa fa-trash"></i>&nbsp;&nbsp;@lang('messages.delete'); ?>
+                    </button>
+                    <button type="button" id="btn_img_select" class="btn bg-olive btn-file-select">
+                        <i class="fa fa-check"></i>&nbsp;&nbsp;@lang('messages.select_image'); ?>
+                    </button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">@lang('messages.close'); ?></button>
                 </div>
             </div>

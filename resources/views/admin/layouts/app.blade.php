@@ -47,11 +47,13 @@
     <script src="{{ asset('assets/admin/js/jquery.min.js') }}"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]-->
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-{{--    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js'"></script>--}}
-<!--[endif]-->
 
+    <script>
+        var csfr_token_name  = 'varient_csrf_token';
+        var csfr_cookie_name = 'varient_csrf_token';
+        var base_url         = '{{ config('app.url') }}/';
+        var fb_app_id        = '';
+    </script>
     <script>
     </script>
 </head>
@@ -185,12 +187,16 @@
 <!-- Pace -->
 <script src="{{ asset('assets/admin/plugins/pace/pace.min.js') }}"></script>
 <!-- File Manager -->
-<script src="{{ asset('assets/admin/plugins/file-manager/file-manager.min.js') }}"></script>
+{{--<script src="{{ asset('assets/admin/plugins/file-manager/file-manager.min.js') }}"></script>--}}
+<script src="{{ asset('assets/admin/plugins/file-manager/file-manager.js') }}"></script>
 <script src="{{ asset('assets/admin/plugins/tagsinput/jquery.tagsinput.min.js') }}"></script>
 <!-- Bootstrap Toggle js -->
 <script src="{{ asset('assets/admin/js/bootstrap-toggle.min.js') }}"></script>
+<script src="http://malsup.github.com/jquery.form.js"></script>
 <!-- Plugins js -->
+{{--<script src="{{ asset('assets/admin/js/plugins.js') }}"></script>--}}
 <script src="{{ asset('assets/admin/js/plugins.js') }}"></script>
+
 <!-- Color Picker js -->
 <script src="{{ asset('assets/admin/plugins/colorpicker/bootstrap-colorpicker.min.js') }}"></script>
 <!-- Datepicker js -->

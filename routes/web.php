@@ -38,6 +38,12 @@ Route::prefix('admin')->group(function () {
 
     Route::get('/audio','AudioController@create');
     Route::post('/audio','AudioController@store');
+
+
+    Route::post('/file/upload','FileController@upload');
+    Route::get('/file/get_images','FileController@get_images');
+    Route::post('/file/get_images','FileController@get_images');
+    Route::post('/file/upload-multiple-images','FileController@upload_multiple_images');
     ///----------------------
 });
 
