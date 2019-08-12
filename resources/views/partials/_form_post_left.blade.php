@@ -7,12 +7,10 @@
 
     <div class="box-body">
         <!-- include message block -->
-        <?php //$this->load->view('admin/includes/_messages'); ?>
-
         <div class="form-group">
             <label class="control-label">@lang('messages.title')</label>
             <input type="text" class="form-control" name="title" placeholder="@lang('messages.title')"
-                   value="" required>
+                   value="{{ old('title',$post->title) }}" required>
         </div>
 
         <div class="form-group">
@@ -20,7 +18,7 @@
                 <small>(@lang('messages.slug_exp'))</small>
             </label>
             <input type="text" class="form-control" name="title_slug" placeholder="@lang('messages.slug')"
-                   value="">
+                   value="{{ old('title_slug', $post->title_slug) }}">
         </div>
 
         <div class="form-group">
@@ -28,14 +26,14 @@
                 (@lang('messages.meta_tag'))</label>
             <textarea class="form-control text-area"
                       name="summary"
-                      placeholder="@lang('messages.summary') & @lang("messages.description") (@lang('messages.meta_tag'))"></textarea>
+                      placeholder="@lang('messages.summary') & @lang("messages.description") (@lang('messages.meta_tag'))">{{ old('summary', $post->description) }}</textarea>
         </div>
 
         <div class="form-group">
             <label class="control-label">@lang('messages.keywords') (@lang('messages.meta_tag'))</label>
             <input type="text" class="form-control" name="keywords"
                    placeholder="@lang('messages.keywords') (@lang('messages.meta_tag'))"
-                   value="">
+                   value="{{ old('keywords',$post->keywords)  }}">
         </div>
 
         <?php if (check_user_permission('manage_all_posts')): ?>
@@ -105,7 +103,7 @@
                 </div>
                 <div class="col-md-9 col-sm-12">
                     <input type="checkbox" name="is_breaking" value="1"
-                           class="square-purple" >
+                           class="square-purple">
                 </div>
             </div>
         </div>
@@ -122,7 +120,7 @@
                 </div>
                 <div class="col-md-9 col-sm-12">
                     <input type="checkbox" name="is_slider" value="1"
-                           class="square-purple" >
+                           class="square-purple">
                 </div>
             </div>
         </div>
@@ -154,7 +152,7 @@
                 </div>
                 <div class="col-md-9 col-sm-12">
                     <input type="checkbox" name="need_auth" value="1"
-                           class="square-purple" >
+                           class="square-purple">
                 </div>
             </div>
         </div>
@@ -176,7 +174,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <label class="control-label">@lang('messages.tags')</label>
-                    <input id="tags_1" type="text" name="tags" class="form-control tags"/>
+                    <input id="tags_1" type="text" name="tags" class="form-control tags" value="{{ implode(',',$post->tags()->get()->toArray()) }}"/>
                     <small>(@lang('messages.type_tag'))</small>
                 </div>
             </div>
@@ -194,17 +192,17 @@
         </div>
 
         @if($show_content_field == true)
-        <div class="form-group">
-            <div class="row">
-                <div class="col-sm-12">
-                    <label class="control-label">@lang('messages.content')</label>
-                    <textarea id="ckEditor" class="form-control"
-                              name="content" placeholder="Content" required></textarea>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label class="control-label">@lang('messages.content')</label>
+                        <textarea id="ckEditor" class="form-control"
+                                  name="content" placeholder="Content" required>{{ $post->page_content }}</textarea>
+                    </div>
                 </div>
             </div>
-        </div>
         @else
-        <input type="hidden" name="content" value="">
+            <input type="hidden" name="content" value="">
         @endif
 
     </div>

@@ -7,11 +7,16 @@
     <div class="box-body">
         <div class="form-group">
             <label class="control-label">@lang('messages.category')</label>
-            <select id="categories" name="category_id" class="form-control" onchange="get_sub_categories(this.value);" required>
+            <select id="categories" name="category_id" class="form-control" onchange="get_sub_categories(this.value);"
+                    required>
                 <option value="">@lang('messages.select_category')</option>
 
                 @foreach($categories as $category)
-                    <option value="{{ $category->id }}">{{ $category->name }}</option> 
+                    <option value="{{ $category->id }}"
+                            @if($category->id == $post->category_id)
+                            selected="selected"
+                            @endif
+                    >{{ $category->name }}</option>
                 @endforeach
 
             </select>

@@ -16,4 +16,10 @@ class Post extends Model
     {
         return $this->hasMany(PostOrderedListItem::class);
     }
+
+    public function tags()
+    {
+        return $this->hasMany(Tag::class);
+    }
+
 }

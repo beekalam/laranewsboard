@@ -29,7 +29,7 @@
                 <h2 class="title">{{  ($post->title) }}</h2>
                 <p class="description m-b-15">{{  ($post->summary) }}</p>
                 <a href="admin/update-post/{{$post->id}}" class="btn btn-default m-t-5"><i
-                            class="fa fa-angle-left"></i>&nbsp;&nbsp;&nbsp;@lang("edit_post_details")</a>
+                            class="fa fa-angle-left"></i>&nbsp;&nbsp;&nbsp;@lang("messages.edit_post_details")</a>
             </div>
         </div>
         <div class="col-sm-4">
