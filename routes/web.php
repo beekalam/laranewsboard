@@ -28,6 +28,8 @@ Route::prefix('admin')->group(function () {
 
     Route::get('/ordered-list','OrderedListController@create');
     Route::post('/ordered-list','OrderedListController@store');
+    Route::get('/ordered-list-item/{post}','OrderedListController@create_ordered_list_item')->name('ordered-list.create');
+    Route::post('/ordered-list-item/{post}/{item}','OrderedListController@store_ordered_list_item')->name('ordered-list-item.store');
 
     Route::get('/gallery','GalleryController@create');
     Route::post('/gallery','GalleryController@store');

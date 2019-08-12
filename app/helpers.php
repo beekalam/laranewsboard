@@ -21,6 +21,7 @@ function is_admin()
 function get_language($input){
 	return $input;
 }
+function html_escape($in){ return $in;}
 
 function helper_get_category($input){
 	return $input;

@@ -45,7 +45,7 @@
        </form><!-- form end -->
     </div>
 </div>
-
+@include('partials._file_manager_image',['images' => []])
 <style>
     .row-image-description {
         visibility: hidden;
