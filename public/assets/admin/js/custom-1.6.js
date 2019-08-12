@@ -577,10 +577,10 @@ function select_post_item_image(file_id) {
     var data = {
         "file_id": file_id
     };
-    data[csfr_token_name] = $.cookie(csfr_cookie_name);
+    // data[csfr_token_name] = $.cookie(csfr_cookie_name);
     $.ajax({
         type: "POST",
-        url: base_url + "file_controller/select_image_file",
+        url: base_url + "admin/file/select-image-file",
         data: data,
         success: function (response) {
             var item_tab_id = $("#post_item_image_button_id").val();

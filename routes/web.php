@@ -29,6 +29,7 @@ Route::prefix('admin')->group(function () {
     Route::get('/ordered-list','OrderedListController@create');
     Route::post('/ordered-list','OrderedListController@store');
     Route::get('/ordered-list-item/{post}','OrderedListController@create_ordered_list_item')->name('ordered-list.create');
+    Route::post('/ordered-list-item/add-item/{post}','OrderedListController@new_ordered_list_item')->name('ordered-list.new');
     Route::post('/ordered-list-item/{post}/{item}','OrderedListController@store_ordered_list_item')->name('ordered-list-item.store');
 
     Route::get('/gallery','GalleryController@create');
@@ -37,10 +38,8 @@ Route::prefix('admin')->group(function () {
     Route::get('/video','videoController@create');
     Route::post('/video','VideoController@store');
 
-
     Route::get('/audio','AudioController@create');
     Route::post('/audio','AudioController@store');
-
 
     Route::post('/file/upload','FileController@upload');
     Route::get('/file/get_images','FileController@get_images');

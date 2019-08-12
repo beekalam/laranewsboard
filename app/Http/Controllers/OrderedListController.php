@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Image;
 use App\Post;
 use App\PostOrderedListItem;
 use Illuminate\Http\Request;
@@ -42,23 +43,34 @@ class OrderedListController extends Controller
     }
 
 
+    public function new_ordered_list_item(Post $post)
+    {
+        PostOrderedListItem::create([
+            'post_id' => $post->id,
+            'title'   => '',
+            'content' => ''
+        ]);
+        
+        return redirect(route('ordered-list.create', $post));
+    }
+
     public function create_ordered_list_item(Post $post)
     {
-        if ($post->orderedListItems->count() == 0) {
-            PostOrderedListItem::create([
-                'post_id' => $post->id,
-                'title' => '',
-                'content' => ''
-            ]);
-        }
         return view('admin.ordered-list.item-create', [
             'categories' => Category::where('parent_id', 0)->get(),
             'post'       => $post,
         ]);
     }
 
-    public function store_ordered_list_item(Post $post, PostOrderedListItem $postOrderedListItem)
+    public function store_ordered_list_item(Post $post, PostOrderedListItem $item)
     {
-       dump('in func');
+        $fields = request()->only('title', 'content', 'image_description', 'item_order');
+        $image = Image::where('id', request('image_id'))->first();
+        if ($image) {
+            $fields['image'] = $image->image_big;
+            $fields['image_large'] = $image->image_default;
+        }
+        $item->update($fields);
+        return redirect(route('ordered-list.create', $post));
     }
 }
