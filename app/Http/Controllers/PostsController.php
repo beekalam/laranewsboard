@@ -45,18 +45,11 @@ class PostsController extends Controller
         $fields['slug'] = $request->filled('slug') ? $request->slug : Str::slug($request->title);
         $fields['subcategory_id'] = $request->subcategory_id;
         $fields['user_id'] = auth()->id();
+        $fields['page_content'] = $request->content;
         $fields['post_type'] = 'post';
         $post = Post::create($fields);
-        foreach ($request->additional_post_image_id as $imageId) {
-            $image = Image::where('id', $imageId)->first();
-            if ($image) {
-                PostImage::create([
-                    'post_id'       => $post->id,
-                    'image_big'     => $image->image_big,
-                    'image_default' => $image->image_default
-                ]);
-            }
-        }
+        $post->addPostImages(request('additional_post_image_id'));
+        $post->addPostTags(explode(',',trim($request->tags)));
         return redirect('/admin/posts/create')->with('message', 'Post created successfully.');
     }
 
