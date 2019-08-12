@@ -61,6 +61,11 @@ class FileController extends Controller
         }
     }
 
+    public function select_image_file(Request $request)
+    {
+       return response(asset('storage/'. Image::where('id', $request->file_id)->first()->image_mid));
+    }
+
     public function postSliderImageUpload($path)
     {
         try {

@@ -44,6 +44,7 @@ Route::prefix('admin')->group(function () {
     Route::get('/file/get_images','FileController@get_images');
     Route::post('/file/get_images','FileController@get_images');
     Route::post('/file/upload-multiple-images','FileController@upload_multiple_images');
+    Route::post('/file/select-image-file','FileController@select_image_file');
     ///----------------------
 });
 

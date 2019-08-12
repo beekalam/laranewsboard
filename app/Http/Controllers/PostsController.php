@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Image;
 use App\Post;
+use App\PostImage;
 use Illuminate\Http\Request;
 use Str;
 
@@ -44,7 +46,17 @@ class PostsController extends Controller
         $fields['subcategory_id'] = $request->subcategory_id;
         $fields['user_id'] = auth()->id();
         $fields['post_type'] = 'post';
-        Post::create($fields);
+        $post = Post::create($fields);
+        foreach ($request->additional_post_image_id as $imageId) {
+            $image = Image::where('id', $imageId)->first();
+            if ($image) {
+                PostImage::create([
+                    'post_id'       => $post->id,
+                    'image_big'     => $image->image_big,
+                    'image_default' => $image->image_default
+                ]);
+            }
+        }
         return redirect('/admin/posts/create')->with('message', 'Post created successfully.');
     }
 

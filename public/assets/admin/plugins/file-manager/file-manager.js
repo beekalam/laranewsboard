@@ -20,15 +20,17 @@ $(document).on('change', '.img_file_manager_input', function () {
 });
 
 $(document).on('click', '#btn_file_manager_image_upload', function () {
+    console.log('on click');
     $("#form_image_file_manager").ajaxSubmit({
         beforeSubmit: function (inputs, $form, options) {
-            inputs.push({name: csfr_token_name, value: $.cookie(csfr_cookie_name)});
+            // inputs.push({name: csfr_token_name, value: $.cookie(csfr_cookie_name)});
             $("#btn_file_manager_image_upload").hide();
             $('.loader-file-manager').show();
             $("#btn_img_upload").attr("disabled", true);
             $(".img_file_manager_input").attr("disabled", true);
         },
         complete: function () {
+            console.log('in complete');
             $('.loader-file-manager').hide();
             $('#MultidvPreview').empty();
             $("#btn_img_upload").attr("disabled", false);
@@ -53,10 +55,10 @@ $(document).on('click', '#btn_file_manager_image_upload', function () {
 //refresh images
 function refresh_images() {
     var data = {};
-    data[csfr_token_name] = $.cookie(csfr_cookie_name);
+    // data[csfr_token_name] = $.cookie(csfr_cookie_name);
     $.ajax({
         type: "POST",
-        url: base_url + "file_controller/get_images",
+        url: base_url + "/admin/file/get_images",
         data: data,
         success: function (response) {
             document.getElementById("image_file_upload_response").innerHTML = response;
@@ -71,7 +73,7 @@ $(document).on('click', '#image_file_manager #btn_img_delete', function () {
     var data = {
         "file_id": file_id
     };
-    data[csfr_token_name] = $.cookie(csfr_cookie_name);
+    // data[csfr_token_name] = $.cookie(csfr_cookie_name);
 
     $.ajax({
         type: "POST",
@@ -103,10 +105,10 @@ function select_image() {
     var data = {
         "file_id": file_id
     };
-    data[csfr_token_name] = $.cookie(csfr_cookie_name);
+    // data[csfr_token_name] = $.cookie(csfr_cookie_name);
     $.ajax({
         type: "POST",
-        url: base_url + "file_controller/select_image_file",
+        url: base_url + "/admin/file/select-image-file",
         data: data,
         success: function (response) {
             if (type == "image") {
@@ -145,7 +147,7 @@ $(document).on('click', '.btn-delete-additional-image-database', function () {
     var data = {
         "file_id": item_id
     };
-    data[csfr_token_name] = $.cookie(csfr_cookie_name);
+    // data[csfr_token_name] = $.cookie(csfr_cookie_name);
     $.ajax({
         type: "POST",
         url: base_url + "post_controller/delete_post_additional_image",
@@ -160,7 +162,7 @@ jQuery(function ($) {
     $('#image_file_manager .file-manager-content').on('scroll', function () {
         if ($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
             var data = {};
-            data[csfr_token_name] = $.cookie(csfr_cookie_name);
+            // data[csfr_token_name] = $.cookie(csfr_cookie_name);
             $.ajax({
                 type: "POST",
                 url: base_url + "file_controller/load_more_images",
@@ -176,10 +178,10 @@ jQuery(function ($) {
 //update images
 $('#image_file_manager').on('show.bs.modal', function (e) {
     var data = {};
-    data[csfr_token_name] = $.cookie(csfr_cookie_name);
+    // data[csfr_token_name] = $.cookie(csfr_cookie_name);
     $.ajax({
         type: "POST",
-        url: base_url + "file_controller/get_images",
+        url: base_url + "/admin/file/get_images",
         data: data,
         success: function (response) {
             document.getElementById("image_file_upload_response").innerHTML = response;
@@ -215,7 +217,7 @@ $(document).on('change', '.img_ck_file_manager_input', function () {
 $(document).on('click', '#btn_ck_file_manager_image_uplaod', function () {
     $("#form_image_ck_file_manager").ajaxSubmit({
         beforeSubmit: function (inputs, $form, options) {
-            inputs.push({name: csfr_token_name, value: $.cookie(csfr_cookie_name)});
+            // inputs.push({name: csfr_token_name, value: $.cookie(csfr_cookie_name)});
             $("#btn_ck_file_manager_image_uplaod").hide();
             $('.loader-file-manager').show();
             $("#btn_ckimg_upload").attr("disabled", true);
@@ -246,7 +248,7 @@ $(document).on('click', '#btn_ck_file_manager_image_uplaod', function () {
 //refresh ck images
 function refresh_ck_images() {
     var data = {};
-    data[csfr_token_name] = $.cookie(csfr_cookie_name);
+    // data[csfr_token_name] = $.cookie(csfr_cookie_name);
     $.ajax({
         type: "POST",
         url: base_url + "file_controller/get_ck_images",
@@ -282,7 +284,7 @@ $(document).on('click', '#ck_file_manager #btn_ckimg_delete', function () {
     var data = {
         "file_id": file_id
     };
-    data[csfr_token_name] = $.cookie(csfr_cookie_name);
+    // data[csfr_token_name] = $.cookie(csfr_cookie_name);
 
     $.ajax({
         type: "POST",
@@ -302,7 +304,7 @@ jQuery(function ($) {
         if ($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
 
             var data = {};
-            data[csfr_token_name] = $.cookie(csfr_cookie_name);
+            // data[csfr_token_name] = $.cookie(csfr_cookie_name);
 
             $.ajax({
                 type: "POST",
@@ -319,7 +321,7 @@ jQuery(function ($) {
 //update images
 $('#ck_file_manager').on('show.bs.modal', function (e) {
     var data = {};
-    data[csfr_token_name] = $.cookie(csfr_cookie_name);
+    // data[csfr_token_name] = $.cookie(csfr_cookie_name);
     $.ajax({
         type: "POST",
         url: base_url + "file_controller/get_ck_images",
@@ -366,7 +368,7 @@ $(document).on('click', '#btn_audio_upload', function () {
         form_data.append('audio_name', $('#add_audio_form #audio_name').val());
         form_data.append('musician', $('#add_audio_form #musician').val());
         form_data.append('download_button', $('input[name=audio_download_button]:checked').val());
-        form_data.append(csfr_token_name, $.cookie(csfr_cookie_name));
+        // form_data.append(csfr_token_name, $.cookie(csfr_cookie_name));
 
         $.ajax({
             method: 'POST',
@@ -408,7 +410,7 @@ function select_audio() {
     var data = {
         "file_id": file_id
     };
-    data[csfr_token_name] = $.cookie(csfr_cookie_name);
+    // data[csfr_token_name] = $.cookie(csfr_cookie_name);
     $.ajax({
         type: "POST",
         url: base_url + "file_controller/select_audio_file",
@@ -431,7 +433,7 @@ $(document).on('click', '#audio_file_manager #btn_audio_delete', function () {
     var data = {
         "file_id": file_id
     };
-    data[csfr_token_name] = $.cookie(csfr_cookie_name);
+    // data[csfr_token_name] = $.cookie(csfr_cookie_name);
     $.ajax({
         type: "POST",
         url: base_url + "file_controller/delete_audio_file",
@@ -458,7 +460,7 @@ jQuery(function ($) {
         if (search.length < 1) {
             if ($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
                 var data = {};
-                data[csfr_token_name] = $.cookie(csfr_cookie_name);
+                // data[csfr_token_name] = $.cookie(csfr_cookie_name);
                 $.ajax({
                     type: "POST",
                     url: base_url + "file_controller/load_more_audios",
@@ -479,7 +481,7 @@ $(document).on('input', '#input_search_audio', function () {
     var data = {
         "search": search
     };
-    data[csfr_token_name] = $.cookie(csfr_cookie_name);
+    // data[csfr_token_name] = $.cookie(csfr_cookie_name);
     $.ajax({
         type: "POST",
         url: base_url + "file_controller/search_audio_file",
@@ -527,7 +529,7 @@ $(document).on('click', '#btn_video_upload', function () {
         var form_data = new FormData();
         form_data.append('video_file', $('#add_video_form #video_file_input').prop('files')[0]);
         form_data.append('video_name', $('#add_video_form #video_name').val());
-        form_data.append(csfr_token_name, $.cookie(csfr_cookie_name));
+        // form_data.append(csfr_token_name, $.cookie(csfr_cookie_name));
 
         $.ajax({
             method: 'POST',
@@ -562,7 +564,7 @@ $(document).on('click', '#video_file_manager #btn_video_delete', function () {
     var data = {
         "file_id": file_id
     };
-    data[csfr_token_name] = $.cookie(csfr_cookie_name);
+    // data[csfr_token_name] = $.cookie(csfr_cookie_name);
 
     $.ajax({
         type: "POST",
@@ -595,7 +597,7 @@ function select_video() {
     var data = {
         "file_id": file_id
     };
-    data[csfr_token_name] = $.cookie(csfr_cookie_name);
+    // data[csfr_token_name] = $.cookie(csfr_cookie_name);
 
     $.ajax({
         type: "POST",
@@ -618,7 +620,7 @@ jQuery(function ($) {
         if (search.length < 1) {
             if ($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
                 var data = {};
-                data[csfr_token_name] = $.cookie(csfr_cookie_name);
+                // data[csfr_token_name] = $.cookie(csfr_cookie_name);
                 $.ajax({
                     type: "POST",
                     url: base_url + "file_controller/load_more_videos",
@@ -639,7 +641,7 @@ $(document).on('input', '#input_search_video', function () {
     var data = {
         "search": search
     };
-    data[csfr_token_name] = $.cookie(csfr_cookie_name);
+    // data[csfr_token_name] = $.cookie(csfr_cookie_name);
     $.ajax({
         type: "POST",
         url: base_url + "file_controller/search_video_file",
